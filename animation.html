@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Animation</title>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+body
+{
+    margin: 0;
+    padding: 0;
+    background: #000;
+    font-family: 'Kaushan Script',cursive;
+    overflow: hidden;
+}
+ul
+{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 30%;
+    top: 30%;
+}
+ul li
+{
+    list-style: none;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    border-radius: 100%;
+    box-shadow: 0 0 5px rgba(0,0,0,.6);
+    transform-origin: bottom center;
+    animation: blockanimate 7s linear infinite; 
+}
+@keyframes blockanimate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(359deg);
+    }
+}
+ul li:nth-child(1)
+{
+    background: rgba(214,188,211,.8);
+    animation-delay: 0s;
+}
+ul li:nth-child(2)
+{
+    background: rgba(216,134,167,.8);
+    animation-delay: 1s;
+}
+ul li:nth-child(3)
+{
+    background: rgba(177,101,212,.8);
+    animation-delay: 2s;
+}
+ul li:nth-child(4)
+{
+    background: rgba(123,77,197,.8);
+    animation-delay: 3s;
+}
+ul li:nth-child(5)
+{
+    background: rgba(253,143,232,.8);
+    animation-delay: 4s;
+}
+ul li:nth-child(6)
+{
+    background: rgba(251,125,195,.8);
+    animation-delay: 5s;
+}
+ul li:nth-child(7)
+{
+    background: rgba(229,103,154,.8);
+    animation-delay: 6s;
+}
+ul li:nth-child(8)
+{
+    background: rgba(48,83,144,.4);
+    animation-delay: 7s;
+}
+h2
+ {
+     margin: 40px 0 0;
+     padding: 0;
+     text-align: center;
+     font-size: 4em;
+     animation: hcolorAnimate 5s linear infinite;
+}
+  @keyframes hcolorAnimate
+ {
+     0%
+     {
+         color: #000000;
+     }
+     25%
+     {
+         color: #00FF7F;
+     }
+     50%
+     {
+         color: #FF1493;
+     }
+     75%
+     {
+         color: #F8F8FF;
+     }
+     100%
+     {
+         color: #FFFFFF;
+     }
+ }
+</style>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+</head>
+<body>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<h2>Animation....</h2>
+<script>
+alert ("tap on circle for changing animation");
+var time = 4;
+window.onload = function(){
+document.body.addEventListener('click',()=>{
+    time *= 0.8;         document.querySelectorAll('li').forEach((item)=>{
+        item.style.animationDuration = `${time}s`;
+    });
+});
+}
+	</script>
+</body>
+
+</html>
+
